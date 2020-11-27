@@ -1,12 +1,14 @@
-// vue.config.js
+// vue.config.js for less-loader@7.0.0
 module.exports = {
   css: {
     loaderOptions: {
       less: {
-        // for less-loader@5
-        javascriptEnabled: true,
-        modifyVars: {
-          'primary-color': '#00B9B2'
+        lessOptions: {
+          modifyVars: {
+            'primary-color': '#00B9B2',
+            'layout-header-background': '#001E21'
+          },
+          javascriptEnabled: true
         }
       }
     }
