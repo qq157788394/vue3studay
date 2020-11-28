@@ -7,12 +7,18 @@
 </template>
 
 <style lang="less">
+@font-face {
+  font-family: 'number';
+  src: url('./assets/RobotoCondensed-Regular.ttf');
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: number;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  font-weight: 900;
 }
 
 #nav {
@@ -25,6 +31,24 @@
     &.router-link-exact-active {
       color: #42b983;
     }
+  }
+}
+
+.scrollBar {
+    //定义特殊的scrollbar
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .06);
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, .04) 0 0 0 1px inset;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, .04);
   }
 }
 </style>
